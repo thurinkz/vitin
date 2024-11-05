@@ -1,0 +1,58 @@
+.tópicos {
+    background: var(--azul-degrade);
+    text-align: center;
+    padding: 3em 2em; /* Aumentei o padding para dar mais espaçamento */
+    border-radius: 10px; /* Adicionando borda arredondada para suavizar o visual */
+}
+
+.tópicos__titulo {
+    color: var(--branco);
+    font-weight: 400;
+    margin-bottom: 1.5em; /* Aumentei o espaçamento inferior */
+    font-size: 22px; /* Aumentei o tamanho da fonte do título */
+}
+
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em; /* Adicionando gap entre os itens */
+    padding: 0 1em; /* Ajuste de espaçamento lateral */
+}
+
+.tópicos__item {
+    margin: 0; /* Removi o espaçamento vertical para evitar grandes intervalos entre os itens */
+}
+
+.tópicos__link {
+    color: var(--branco);
+    padding: 1.5em 2.5em; /* Aumentei o padding para maior área clicável */
+    background-color: var(--laranja);
+    text-decoration: none;
+    font-size: 16px; /* Aumentei o tamanho da fonte */
+    font-weight: 700;
+    border-radius: 24px; /* Bordas arredondadas para os links */
+    transition: all 0.3s ease; /* Transição suave para hover */
+    display: inline-block; /* Para os links se comportarem como botões */
+}
+
+/* Efeito de hover nos links */
+.tópicos__link:hover {
+    background-color: var(--azul); /* Alteração da cor de fundo no hover */
+    color: var(--branco); /* Mudança da cor do texto para branco no hover */
+    transform: scale(1.05); /* Efeito de aumentar ligeiramente no hover */
+}
+
+/* Responsividade: ajustes para telas menores */
+@media (max-width: 768px) {
+    .tópicos__lista {
+        flex-direction: column; /* Coloca os itens em coluna em telas pequenas */
+        gap: 1em; /* Reduz o espaçamento entre os itens em dispositivos móveis */
+    }
+
+    .tópicos__link {
+        width: 100%; /* Os links agora ocupam toda a largura disponível */
+        padding: 1.2em 0; /* Ajusta o padding para telas menores */
+        font-size: 14px; /* Reduz o tamanho da fonte para dispositivos móveis */
+    }
+}

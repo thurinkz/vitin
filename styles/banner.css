@@ -1,0 +1,77 @@
+/* Estilo da seção banner */
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    text-align: center;
+    padding: 4em 2em; /* Maior espaçamento nas laterais para melhorar o visual em telas grandes */
+    border-radius: 15px; /* Adicionando borda arredondada para um design mais moderno */
+}
+
+/* Título principal da seção banner */
+.banner__titulo {
+    font-size: 2rem; /* Tamanho ajustado para maior legibilidade */
+    font-weight: 700;
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    letter-spacing: 1px; /* Espaçamento entre as letras para um título mais estilizado */
+}
+
+/* Texto descritivo no banner */
+.banner__texto {
+    font-weight: 500;
+    margin: 1.5em 0; /* Ajustando o espaçamento superior e inferior */
+    font-size: 1.2rem; /* Tamanho ajustado para melhorar a leitura */
+    line-height: 1.6; /* Melhorando a altura da linha para o texto ficar mais arejado */
+}
+
+/* Estilo do campo de pesquisa */
+.banner__pesquisa {
+    background-color: transparent;
+    border: 2px solid var(--branco); /* Aumentando a espessura da borda para dar mais destaque */
+    color: var(--branco);
+    border-radius: 30px; /* Borda mais arredondada para um visual mais suave */
+    padding: 0.8em 2em; /* Ajustando o padding para um campo de entrada mais confortável */
+    width: 100%;
+    max-width: 500px; /* Limite de largura para evitar que o campo fique muito largo */
+    margin: 0 auto; /* Centralizando o campo na tela */
+    font-size: 1rem; /* Tamanho da fonte para o texto dentro do campo */
+}
+
+/* Estilo do placeholder dentro do campo de pesquisa */
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+    background: url("../img/Lupa.svg") no-repeat;
+    background-position: 1em center; /* Centralizando o ícone dentro do campo */
+    background-size: 16px; /* Ajustando o tamanho do ícone */
+    padding-left: 3.5em; /* Dando espaço para o ícone da lupa */
+}
+
+/* Estilo da pesquisa no foco (quando o usuário clica no campo) */
+.banner__pesquisa:focus {
+    border-color: var(--laranja); /* Mudando a cor da borda quando o campo está em foco */
+    outline: none; /* Removendo a borda padrão do navegador */
+    box-shadow: 0 0 5px var(--laranja); /* Adicionando uma sombra suave para destacar o campo */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner {
+        padding: 3em 1.5em; /* Menos espaçamento em telas pequenas */
+    }
+
+    .banner__titulo {
+        font-size: 1.5rem; /* Reduzindo o tamanho do título em telas menores */
+    }
+
+    .banner__texto {
+        font-size: 1rem; /* Ajustando o tamanho do texto */
+    }
+
+    .banner__pesquisa {
+        max-width: 100%; /* Permitir que o campo de pesquisa ocupe toda a largura em telas pequenas */
+        padding: 0.8em; /* Menos padding para não ocupar tanto espaço */
+    }
+}

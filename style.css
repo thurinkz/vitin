@@ -1,0 +1,172 @@
+/* Importando os arquivos CSS */
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
+
+/* Definindo variáveis para cores e fontes */
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins", sans-serif;
+    --azul: #002F52;
+    --azul-claro: #326589;
+    --cinza-claro: #F5F5F5;
+    --cinza-escuro: #B6B6B6;
+    --laranja-escuro: #C77A00;
+}
+
+/* Configurações gerais do body */
+body {
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do header */
+header {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do banner */
+.banner {
+    background: var(--azul-degrade);
+    color: var(--branco);
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.banner__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.banner__texto {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner__pesquisa {
+    padding: 0.8rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 1px solid var(--cinza-claro);
+    font-size: 1rem;
+    background-color: var(--branco);
+}
+
+/* Estilo dos carrosséis */
+.carrossel {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.carrossel__titulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.swiper {
+    margin-bottom: 20px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo dos tópicos */
+.tópicos {
+    background-color: var(--cinza-claro);
+    padding: 20px;
+}
+
+.tópicos__titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tópicos__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tópicos__item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.tópicos__link {
+    text-decoration: none;
+    color: var(--azul);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.tópicos__link:hover {
+    color: var(--laranja);
+}
+
+/* Estilo do contato */
+.contato {
+    background-color: var(--branco);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.contato__titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contato__texto {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contato__email {
+    padding: 1rem;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 20px;
+    border: 1px solid var(--cinza-claro);
+    font-size: 1rem;
+    background-color: var(--branco);
+}
+
+/* Estilo do rodapé */
+footer.rodapé {
+    background-color: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 30px;
+}
+
+.rodapé__titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}

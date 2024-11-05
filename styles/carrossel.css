@@ -1,0 +1,142 @@
+/* Estilo para o título do carrossel */
+.carrossel__titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem; /* Ajustado para melhorar legibilidade */
+    font-weight: 700;
+    padding: 1.5em 0 1em 0; /* Aumentado o espaçamento superior */
+    letter-spacing: 1px; /* Adicionado espaçamento entre letras para melhorar o visual */
+}
+
+/* Estilo das imagens dentro do carrossel */
+.swiper-slide img {
+    width: 100%;
+    object-fit: cover; /* Assegura que as imagens se ajustem bem dentro do slide */
+    border-radius: 10px; /* Borda arredondada nas imagens */
+}
+
+/* Escondendo os botões de navegação do Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none; /* Removido para simplificar, mas pode ser modificado conforme necessário */
+}
+
+/* Estilo da paginação do swiper */
+.swiper-pagination {
+    position: relative;
+    margin-top: 1em; /* Ajustado para dar um pequeno espaço */
+    text-align: center;
+}
+
+/* Estilo da carta do livro */
+.card {
+    background: var(--branco);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave e maior */
+    border-radius: 10px;
+    margin: 1.5em 0; /* Aumentado para melhorar o espaçamento entre as cartas */
+    padding: 1.5em; /* Aumentado o padding para dar mais espaço interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transformação ao passar o mouse */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva a carta ao passar o mouse */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+/* Estilo para a descrição da carta */
+.card__descrição {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em; /* Ajustado para maior espaçamento */
+}
+
+/* Estilo para a parte dos botões da carta */
+.card__botões {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo dos botões dentro da carta */
+.botões {
+    display: flex;
+    gap: 1em; /* Usando gap para um espaçamento mais consistente entre os itens */
+}
+
+/* Estilo do título da descrição */
+.descrição__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+    font-size: 1rem; /* Ajustado para ficar mais proporcional */
+}
+
+/* Estilo do título do livro */
+.descrição__titulo-livro {
+    color: var(--azul);
+    font-size: 1.2rem; /* Tamanho ajustado para maior destaque */
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+/* Texto da descrição do livro */
+.descrição__texto {
+    font-size: 0.9rem; /* Ajustado para um texto mais leve */
+    line-height: 1.5; /* Melhorando a legibilidade com maior altura de linha */
+}
+
+/* Estilo do link de ação "Saiba mais" */
+.botões__ancora {
+    background-color: var(--laranja);
+    padding: 1em 2em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px; /* Borda arredondada para um visual mais suave */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.botões__ancora:hover {
+    background-color: darken(var(--laranja), 10%); /* Escurece um pouco a cor no hover */
+    transform: translateY(-3px); /* Sobe ligeiramente ao passar o mouse */
+}
+
+/* Estilo dos itens dentro dos botões */
+.botões__item {
+    margin: 0; /* Removido o espaço horizontal extra */
+    cursor: pointer; /* Mudança no cursor para indicar interatividade */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de clique */
+}
+
+.botões__item:hover {
+    transform: scale(1.1); /* Efeito de zoom nos ícones ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    /* Ajuste no tamanho do título do carrossel */
+    .carrossel__titulo {
+        font-size: 1rem;
+        padding: 1.5em 0.5em; /* Menos padding em telas pequenas */
+    }
+
+    /* Ajuste no tamanho do título e descrição do livro */
+    .descrição__titulo-livro {
+        font-size: 1rem; /* Menor em telas pequenas */
+    }
+
+    .descrição__texto {
+        font-size: 0.85rem; /* Menor para melhorar legibilidade */
+    }
+
+    /* Ajuste no padding das cartas */
+    .card {
+        padding: 1.2em; /* Menos padding para aproveitar melhor o espaço */
+    }
+
+    /* Ajuste nos botões */
+    .botões__ancora {
+        padding: 0.8em 1.5em; /* Menos padding em telas pequenas */
+    }
+}
